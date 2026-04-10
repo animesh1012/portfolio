@@ -5,40 +5,32 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "AI-Powered Text Summarizer",
-    description: "End-to-end NLP pipeline using Transformers for abstractive text summarization with fine-tuned T5 model.",
-    tags: ["NLP", "Transformers", "T5", "Python"],
-    stars: 42,
+    title: "Machine Learning Projects",
+    description: "Kaggle-sourced machine learning projects in Python Jupyter notebooks, spanning computer vision to predictive modeling.",
+    tags: ["ML", "Kaggle", "Python", "Jupyter"],
+    stars: 126,
+    repo: "machineLearning",
   },
   {
-    title: "LLM Agent Framework",
-    description: "Multi-agent system with tool use capabilities, built with LangChain for autonomous task completion.",
-    tags: ["LangChain", "Agents", "LLM", "RAG"],
-    stars: 67,
+    title: "Data Analyst Agent",
+    description: "Data Analyst Agent using LangGraph and Streamlit for automated data analysis and insights generation.",
+    tags: ["LangGraph", "Streamlit", "Agents", "GenAI"],
+    stars: 0,
+    repo: "data_analyst_agent",
   },
   {
-    title: "Real-Time Anomaly Detection",
-    description: "ML pipeline for detecting anomalies in streaming data using Isolation Forest and Autoencoders.",
-    tags: ["ML", "Streaming", "PyTorch", "Docker"],
-    stars: 35,
+    title: "GenAI Chatbot",
+    description: "CCMT Counselling Assistant — an intelligent chatbot built with Generative AI for guided counselling support.",
+    tags: ["GenAI", "Python", "Chatbot", "LLM"],
+    stars: 0,
+    repo: "genai_chatbot",
   },
   {
-    title: "Computer Vision Pipeline",
-    description: "Production-grade image classification and object detection system using YOLOv8 and custom datasets.",
-    tags: ["CV", "YOLO", "PyTorch", "MLOps"],
-    stars: 28,
-  },
-  {
-    title: "RAG Knowledge Base",
-    description: "Retrieval-Augmented Generation system with vector databases for enterprise document Q&A.",
-    tags: ["RAG", "ChromaDB", "OpenAI", "FastAPI"],
-    stars: 55,
-  },
-  {
-    title: "ML Experiment Tracker",
-    description: "Custom experiment tracking dashboard with model versioning, metrics visualization, and deployment.",
-    tags: ["MLflow", "Streamlit", "Python", "SQL"],
-    stars: 19,
+    title: "Bird Species Identification",
+    description: "CNN-RNN hybrid model for bird species identification using deep learning and computer vision techniques.",
+    tags: ["CNN", "RNN", "CV", "Deep Learning"],
+    stars: 0,
+    repo: "bird_research_cnn_rnn",
   },
 ];
 
@@ -71,11 +63,11 @@ export function ProjectsSection() {
           </a>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {projects.map((p, i) => (
             <motion.a
               key={p.title}
-              href="https://github.com/animesh1012"
+              href={`https://github.com/animesh1012/${p.repo}`}
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 30 }}

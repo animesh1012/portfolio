@@ -55,9 +55,11 @@ export function BlogSection() {
               className="group p-6 rounded-xl border border-border bg-card hover:glow-border transition-all duration-500"
             >
               <div className="flex items-center gap-3 mb-4 text-xs text-muted-foreground font-mono">
+                <span>{post.date}</span>
+                <span className="w-1 h-1 rounded-full bg-muted-foreground" />
                 <span className="flex items-center gap-1"><Clock size={12} /> {post.readTime}</span>
                 <span className="w-1 h-1 rounded-full bg-muted-foreground" />
-                <span className="flex items-center gap-1"><BookOpen size={12} /> Medium</span>
+                <span>👏 {post.claps}</span>
               </div>
               <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors leading-snug">
                 {post.title}

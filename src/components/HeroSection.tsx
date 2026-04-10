@@ -48,9 +48,11 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Data Scientist specializing in{" "}
-          <span className="text-primary">Machine Learning</span>,{" "}
-          <span className="text-primary">Generative AI</span> &{" "}
+          Senior Data Scientist at{" "}
+          <span className="text-primary">Enverus</span> | Ex-{" "}
+          <span className="text-primary">Philips</span>. Specializing in{" "}
+          <span className="text-primary">GenAI</span>,{" "}
+          <span className="text-primary">NLP</span> &{" "}
           <span className="text-primary">LLMs</span>. Building intelligent systems
           that transform data into actionable insights.
         </motion.p>

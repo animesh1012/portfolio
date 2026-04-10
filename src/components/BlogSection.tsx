@@ -46,7 +46,7 @@ export function BlogSection() {
           {posts.map((post, i) => (
             <motion.a
               key={post.title}
-              href="https://medium.com/@animesh.py"
+              href={post.url}
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 30 }}

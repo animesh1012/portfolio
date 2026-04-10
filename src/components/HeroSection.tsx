@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, FileText, Youtube, ArrowDown } from "lucide-react";
+import { Github, Linkedin, FileText, Youtube, ArrowDown, Download } from "lucide-react";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/animesh1012", label: "GitHub" },

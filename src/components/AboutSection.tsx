@@ -50,11 +50,6 @@ export function AboutSection() {
               <span className="text-primary font-medium">SPOTLESS TECH</span>{" "}
               and technical articles on Medium.
             </p>
-            <div className="flex items-center gap-3 pt-4">
-              <div className="h-px flex-1 bg-border" />
-              <span className="text-xs font-mono text-muted-foreground">core_competencies.py</span>
-              <div className="h-px flex-1 bg-border" />
-            </div>
           </motion.div>
 
           <motion.div

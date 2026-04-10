@@ -5,28 +5,22 @@ import { Button } from "@/components/ui/button";
 
 const posts = [
   {
-    title: "Understanding Transformer Architecture from Scratch",
-    excerpt: "A deep dive into self-attention, positional encoding, and how modern LLMs are built on the Transformer foundation.",
-    readTime: "12 min",
-    tags: ["Deep Learning", "NLP"],
-  },
-  {
-    title: "Building Production RAG Pipelines",
-    excerpt: "How to design retrieval-augmented generation systems that scale, with real-world architecture patterns.",
-    readTime: "10 min",
-    tags: ["RAG", "LLMs"],
-  },
-  {
-    title: "The Complete Guide to Agentic AI",
-    excerpt: "Exploring autonomous AI agents, tool use patterns, and multi-agent orchestration for complex tasks.",
-    readTime: "15 min",
-    tags: ["Agents", "AI"],
-  },
-  {
-    title: "Feature Engineering Best Practices",
-    excerpt: "Proven techniques for creating powerful features that improve model performance in production ML systems.",
+    title: "Mastering Qdrant: A Friendly Guide to Your First Vector Database",
+    excerpt: "Imagine you've just discovered that your data isn't just rows in a table, but points in a high-dimensional space — ready for similarity search and AI retrieval.",
     readTime: "8 min",
-    tags: ["ML", "Data Science"],
+    tags: ["Vector DB", "Qdrant"],
+    claps: 62,
+    date: "Jun 10, 2025",
+    url: "https://medium.com/@animesh.py/mastering-qdrant-a-friendly-guide-to-your-first-vector-database-ecb826d49c8c",
+  },
+  {
+    title: "Step-by-Step Guide to Connecting Qdrant with LangChain for AI Retrieval",
+    excerpt: "Imagine you're building a smart assistant that doesn't just keyword-match your queries, but truly \"understands\" the meaning behind them.",
+    readTime: "10 min",
+    tags: ["LangChain", "RAG"],
+    claps: 11,
+    date: "Jul 13, 2025",
+    url: "https://medium.com/@animesh.py/harnessing-qdrant-and-langchain-a-step-by-step-integration-guide-0e2c397289b6",
   },
 ];
 

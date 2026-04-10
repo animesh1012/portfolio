@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, FileText, Youtube, ArrowDown } from "lucide-react";
+import { Github, Linkedin, FileText, Youtube, ArrowDown, Download } from "lucide-react";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/animesh1012", label: "GitHub" },
@@ -66,6 +66,11 @@ export function HeroSection() {
           </Button>
           <Button variant="glow-outline" size="lg" onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}>
             Get in Touch
+          </Button>
+          <Button variant="glow-outline" size="lg" asChild>
+            <a href="/Animesh_CV.pdf" download="Animesh_Tripathi_CV.pdf">
+              <Download size={16} /> Download CV
+            </a>
           </Button>
         </motion.div>
 

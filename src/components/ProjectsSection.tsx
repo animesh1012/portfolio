@@ -67,7 +67,7 @@ export function ProjectsSection() {
           {projects.map((p, i) => (
             <motion.a
               key={p.title}
-              href="https://github.com/animesh1012"
+              href={`https://github.com/animesh1012/${p.repo}`}
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 30 }}

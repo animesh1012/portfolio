@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Terminal, Brain, Cpu, Sparkles } from "lucide-react";
+import { Terminal, Brain, Cpu, Sparkles, Database, Workflow } from "lucide-react";
 
 const highlights = [
-  { icon: Brain, label: "ML & Deep Learning", desc: "Neural networks, CNNs, RNNs, Transformers" },
-  { icon: Sparkles, label: "Generative AI", desc: "LLMs, RAG, prompt engineering, fine-tuning" },
-  { icon: Terminal, label: "NLP Expert", desc: "Text analysis, sentiment, NER, embeddings" },
-  { icon: Cpu, label: "Agentic AI", desc: "Autonomous agents, tool use, multi-agent systems" },
+  { icon: Brain, label: "ML & Deep Learning", desc: "PyTorch, TensorFlow, CNNs, RNNs, Transformers" },
+  { icon: Sparkles, label: "Generative AI & LLMs", desc: "LangGraph, LangChain, RAG, Fine-tuning, vLLM" },
+  { icon: Terminal, label: "NLP Expert", desc: "Text analysis, NER, embeddings, BERT, spaCy" },
+  { icon: Cpu, label: "Agentic AI", desc: "Multi-agent systems, LangGraph agents, tool use" },
+  { icon: Database, label: "Data Engineering", desc: "Apache Airflow, ETL, Redshift, PostgreSQL, PySpark" },
+  { icon: Workflow, label: "MLOps & DevOps", desc: "Docker, CI/CD, Azure DevOps, Git, MLflow" },
 ];
 
 export function AboutSection() {
@@ -36,14 +38,14 @@ export function AboutSection() {
             className="space-y-5"
           >
             <p className="text-muted-foreground leading-relaxed text-lg">
-              I'm a Data Scientist with an MTech in Computer Science & Engineering
-              specializing in Data Science. My passion lies in building end-to-end
-              machine learning solutions that solve real-world problems.
+              I'm a <span className="text-primary font-medium">Senior Data Scientist at Enverus</span>, 
+              previously at <span className="text-primary font-medium">Philips Innovation Campus</span>, 
+              with 3+ years of hands-on experience in Deep Learning, NLP, LLMs, and production ML systems.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              From developing production-grade ML pipelines to exploring the
-              frontiers of Generative AI and Agentic systems, I bring a unique
-              blend of research depth and engineering pragmatism. I actively
+              From building multi-agent RAG systems and domain-specific SLMs to 
+              architecting GDPR-compliant data pipelines with Apache Airflow, I bring a unique 
+              blend of research depth and engineering pragmatism. I actively 
               share my knowledge through my YouTube channel{" "}
               <span className="text-primary font-medium">SPOTLESS TECH</span>{" "}
               and technical articles on Medium.

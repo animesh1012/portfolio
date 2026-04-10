@@ -3,28 +3,28 @@ import { useRef } from "react";
 
 const skillCategories = [
   {
-    title: "Machine Learning",
-    skills: ["Scikit-learn", "XGBoost", "LightGBM", "Feature Engineering", "Model Optimization", "MLOps"],
+    title: "Languages",
+    skills: ["Python", "C", "SQL"],
   },
   {
-    title: "Deep Learning",
-    skills: ["PyTorch", "TensorFlow", "Keras", "CNNs", "RNNs", "GANs", "Transformers"],
+    title: "Frameworks",
+    skills: ["LangGraph", "LangChain", "Apache Airflow", "Streamlit", "FastAPI"],
+  },
+  {
+    title: "Libraries",
+    skills: ["TensorFlow", "PyTorch", "Transformers", "Scikit-learn", "Pandas", "PySpark", "Boto3"],
   },
   {
     title: "Generative AI & LLMs",
-    skills: ["OpenAI", "LangChain", "LlamaIndex", "RAG", "Fine-tuning", "Prompt Engineering", "Hugging Face"],
+    skills: ["RAG", "Fine-tuning", "vLLM", "Prompt Engineering", "Multi-Agent Systems", "FAISS", "Hugging Face"],
   },
   {
-    title: "NLP",
-    skills: ["spaCy", "NLTK", "BERT", "Sentiment Analysis", "NER", "Text Classification", "Embeddings"],
+    title: "Databases",
+    skills: ["Amazon Redshift", "PostgreSQL", "Vector Databases", "ChromaDB", "Qdrant"],
   },
   {
-    title: "Agentic AI",
-    skills: ["AutoGen", "CrewAI", "Tool Use", "Multi-Agent Systems", "ReAct", "Function Calling"],
-  },
-  {
-    title: "Tools & Platforms",
-    skills: ["Python", "SQL", "Git", "Docker", "AWS", "GCP", "MLflow", "Streamlit"],
+    title: "Dev Tools & Cloud",
+    skills: ["Git", "GitHub", "Azure DevOps", "CI/CD", "Docker", "AWS", "VS Code"],
   },
 ];
 

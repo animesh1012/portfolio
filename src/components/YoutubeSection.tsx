@@ -1,38 +1,50 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Youtube, Play, ExternalLink } from "lucide-react";
+import { Youtube, Play, ListVideo } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const videos = [
+const playlists = [
   {
-    title: "Build a RAG Chatbot from Scratch",
-    views: "15K views",
-    category: "Generative AI",
+    title: "Movie Review Sentiment Analysis from Scratch",
+    description: "Complete NLP & Deep Learning project — build a text sentiment classifier using RNN from scratch.",
+    category: "NLP & Deep Learning",
+    videos: "Multi-part series",
   },
   {
-    title: "Transformers Explained Simply",
-    views: "22K views",
-    category: "Deep Learning",
+    title: "Human Eye Disease Prediction System",
+    description: "Build an image recognition model using Python for detecting eye diseases with ML.",
+    category: "Computer Vision",
+    videos: "Multi-part series",
   },
   {
-    title: "Deploy ML Models with FastAPI",
-    views: "8K views",
-    category: "MLOps",
-  },
-  {
-    title: "LangChain Agents: Complete Guide",
-    views: "12K views",
-    category: "Agentic AI",
-  },
-  {
-    title: "Fine-tune LLMs on Custom Data",
-    views: "18K views",
-    category: "LLMs",
-  },
-  {
-    title: "End-to-End ML Project Tutorial",
-    views: "25K views",
+    title: "Music Genre Classification System",
+    description: "Build an audio classification system using Python — complete ML project walkthrough.",
     category: "Machine Learning",
+    videos: "Multi-part series",
+  },
+  {
+    title: "Plant Disease Detection System",
+    description: "Image recognition model using Python to identify plant diseases — end-to-end ML project.",
+    category: "Computer Vision",
+    videos: "Multi-part series",
+  },
+  {
+    title: "Amazon Redshift Tutorial for Beginners",
+    description: "Learn the basics of Amazon Redshift — data warehousing fundamentals and hands-on tutorials.",
+    category: "Data Engineering",
+    videos: "Multi-part series",
+  },
+  {
+    title: "Fruits & Vegetables Recognition System",
+    description: "Complete ML project — build an image classification system to recognize fruits and vegetables.",
+    category: "Machine Learning",
+    videos: "Multi-part series",
+  },
+  {
+    title: "Heart Disease Prediction Using Python",
+    description: "End-to-end machine learning project to predict heart disease with Python.",
+    category: "Machine Learning",
+    videos: "Multi-part series",
   },
 ];
 
@@ -54,16 +66,16 @@ export function YoutubeSection() {
             <span className="text-gradient">SPOTLESS TECH</span>
           </h2>
           <p className="text-muted-foreground mb-12 max-w-xl">
-            In-depth video tutorials on AI, ML, and Data Science projects with
-            hands-on code walkthroughs.
+            In-depth video playlists on AI, ML, and Data Science projects with
+            hands-on code walkthroughs — from scratch to deployment.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {videos.map((v, i) => (
+          {playlists.map((p, i) => (
             <motion.a
-              key={v.title}
-              href="https://www.youtube.com/c/SPOTLESSTECH"
+              key={p.title}
+              href="https://www.youtube.com/@SPOTLESSTECH/playlists"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 30 }}
@@ -74,14 +86,19 @@ export function YoutubeSection() {
               {/* Thumbnail placeholder */}
               <div className="aspect-video bg-secondary flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/10" />
-                <div className="relative z-10 w-14 h-14 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_20px_var(--color-glow-muted)]">
-                  <Play size={24} className="text-primary-foreground ml-1" fill="currentColor" />
+                <div className="relative z-10 flex items-center gap-3">
+                  <div className="w-14 h-14 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_20px_var(--color-glow-muted)]">
+                    <Play size={24} className="text-primary-foreground ml-1" fill="currentColor" />
+                  </div>
+                </div>
+                <div className="absolute top-3 right-3 flex items-center gap-1 px-2 py-1 rounded-md bg-background/80 text-xs font-mono text-muted-foreground">
+                  <ListVideo size={12} /> Playlist
                 </div>
               </div>
               <div className="p-4">
-                <span className="text-[11px] font-mono text-primary mb-1 block">{v.category}</span>
-                <h3 className="font-semibold text-sm group-hover:text-primary transition-colors">{v.title}</h3>
-                <p className="text-xs text-muted-foreground mt-1">{v.views}</p>
+                <span className="text-[11px] font-mono text-primary mb-1 block">{p.category}</span>
+                <h3 className="font-semibold text-sm group-hover:text-primary transition-colors leading-snug mb-1">{p.title}</h3>
+                <p className="text-xs text-muted-foreground line-clamp-2">{p.description}</p>
               </div>
             </motion.a>
           ))}
@@ -89,7 +106,7 @@ export function YoutubeSection() {
 
         <div className="mt-8 text-center">
           <Button variant="glow" size="lg" asChild>
-            <a href="https://www.youtube.com/c/SPOTLESSTECH" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/@SPOTLESSTECH" target="_blank" rel="noopener noreferrer">
               <Youtube size={18} /> Subscribe on YouTube
             </a>
           </Button>

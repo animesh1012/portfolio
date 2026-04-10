@@ -36,8 +36,8 @@ export function BlogSection() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-sm font-mono text-primary mb-2 tracking-wider uppercase">// Latest Articles</p>
-          <h2 className="text-3xl md:text-5xl font-bold mb-12">
+          <p className="text-sm font-semibold text-primary mb-3 tracking-widest uppercase">Latest Articles</p>
+          <h2 className="text-3xl md:text-5xl font-black tracking-[-0.03em] mb-12">
             Technical <span className="text-gradient">Blog</span>
           </h2>
         </motion.div>
@@ -52,7 +52,7 @@ export function BlogSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * i }}
-              className="group p-6 rounded-xl border border-border bg-card hover:glow-border transition-all duration-500"
+              className="group p-6 rounded-xl border border-border bg-card card-lift"
             >
               <div className="flex items-center gap-3 mb-4 text-xs text-muted-foreground font-mono">
                 <span>{post.date}</span>

@@ -65,10 +65,8 @@ export function ExperienceSection() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-sm font-mono text-primary mb-2 tracking-wider uppercase">
-            // Career
-          </p>
-          <h2 className="text-3xl md:text-5xl font-bold mb-16">
+          <p className="text-sm font-semibold text-primary mb-3 tracking-widest uppercase">Career</p>
+          <h2 className="text-3xl md:text-5xl font-black tracking-[-0.03em] mb-16">
             Work <span className="text-gradient">Experience</span>
           </h2>
         </motion.div>
@@ -93,7 +91,7 @@ export function ExperienceSection() {
                 <div className="mb-6">
                   <div className="flex flex-wrap items-center gap-3 mb-1">
                     <h3 className="text-xl md:text-2xl font-bold">{exp.role}</h3>
-                    <span className="text-xs font-mono px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+                    <span className="text-xs font-semibold px-3 py-1 rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 text-primary border border-primary/20">
                       {exp.period}
                     </span>
                   </div>
@@ -114,7 +112,7 @@ export function ExperienceSection() {
                         duration: 0.5,
                         delay: 0.4 + idx * 0.2 + pIdx * 0.1,
                       }}
-                      className="p-6 rounded-xl border border-border bg-card hover:glow-border transition-all duration-500 group"
+                      className="p-6 rounded-xl border border-border bg-card card-lift group"
                     >
                       <div className="flex items-start gap-3 mb-3">
                         <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">

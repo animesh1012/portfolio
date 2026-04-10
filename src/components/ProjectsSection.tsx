@@ -26,7 +26,7 @@ const projects = [
     repo: "genai_chatbot",
   },
   {
-    title: "Bird Species Identification",
+    title: "Bird Species Identification using Sound Patterns",
     description: "CNN-RNN hybrid model for bird species identification using deep learning and computer vision techniques.",
     tags: ["CNN", "RNN", "CV", "Deep Learning"],
     stars: 0,
@@ -48,19 +48,16 @@ export function ProjectsSection() {
           className="flex items-end justify-between mb-12"
         >
           <div>
-            <p className="text-sm font-mono text-primary mb-2 tracking-wider uppercase">// Featured Work</p>
-            <h2 className="text-3xl md:text-5xl font-bold">
+            <p className="text-sm font-semibold text-primary mb-3 tracking-widest uppercase">Featured Work</p>
+            <h2 className="text-3xl md:text-5xl font-black tracking-[-0.03em]">
               Open Source <span className="text-gradient">Projects</span>
             </h2>
           </div>
-          <a
-            href="https://github.com/animesh1012"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors font-mono"
-          >
-            View all on GitHub <ExternalLink size={14} />
-          </a>
+          <Button variant="glow-outline" size="default" asChild className="shrink-0">
+            <a href="https://github.com/animesh1012" target="_blank" rel="noopener noreferrer">
+              <Github size={16} /> View All on GitHub
+            </a>
+          </Button>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -73,34 +70,36 @@ export function ProjectsSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.08 * i }}
-              className="group p-6 rounded-xl border border-border bg-card hover:glow-border transition-all duration-500 flex flex-col"
+              className="group p-6 rounded-xl border border-border bg-card card-lift flex flex-col"
             >
               <div className="flex items-start justify-between mb-3">
-                <Github className="text-muted-foreground group-hover:text-primary transition-colors" size={20} />
+                <Github className="text-muted-foreground group-hover:text-primary transition-colors duration-300" size={20} />
                 <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                  <span className="flex items-center gap-1"><Star size={12} /> {p.stars}</span>
+                  {p.stars > 0 && <span className="flex items-center gap-1"><Star size={12} /> {p.stars}</span>}
+                  {/* Arrow slides in on hover */}
+                  <ExternalLink
+                    size={14}
+                    className="opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-primary"
+                  />
                 </div>
               </div>
-              <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">{p.title}</h3>
+              <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors duration-300">{p.title}</h3>
               <p className="text-sm text-muted-foreground mb-4 flex-1">{p.description}</p>
               <div className="flex flex-wrap gap-2">
                 {p.tags.map((tag) => (
-                  <span key={tag} className="px-2 py-0.5 text-[11px] rounded-full bg-primary/10 text-primary font-mono border border-primary/20">
+                  <motion.span
+                    key={tag}
+                    whileHover={{ scale: 1.08 }}
+                    className="px-2 py-0.5 text-[11px] rounded-full bg-primary/10 text-primary font-mono border border-primary/20 cursor-default"
+                  >
                     {tag}
-                  </span>
+                  </motion.span>
                 ))}
               </div>
             </motion.a>
           ))}
         </div>
 
-        <div className="mt-8 text-center md:hidden">
-          <Button variant="glow-outline" asChild>
-            <a href="https://github.com/animesh1012" target="_blank" rel="noopener noreferrer">
-              <Github size={16} /> View All on GitHub
-            </a>
-          </Button>
-        </div>
       </div>
     </section>
   );

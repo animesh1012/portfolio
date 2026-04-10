@@ -28,8 +28,8 @@ export function EducationSection() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-sm font-mono text-primary mb-2 tracking-wider uppercase">// Background</p>
-          <h2 className="text-3xl md:text-5xl font-bold mb-12">
+          <p className="text-sm font-semibold text-primary mb-3 tracking-widest uppercase">Background</p>
+          <h2 className="text-3xl md:text-5xl font-black tracking-[-0.03em] mb-12">
             Education & <span className="text-gradient">Achievements</span>
           </h2>
         </motion.div>
@@ -40,7 +40,7 @@ export function EducationSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="p-8 rounded-xl border border-border bg-card hover:glow-border transition-all duration-500"
+            className="p-8 rounded-xl border border-border bg-card card-lift"
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -53,7 +53,7 @@ export function EducationSection() {
                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary shadow-[0_0_10px_var(--color-glow-muted)]" />
                 <h4 className="font-semibold text-base">M.Tech in CSE</h4>
                 <p className="text-primary text-sm font-mono">Specialisation in Data Science</p>
-                <p className="text-muted-foreground text-xs mt-1">IIIT Vadodara • 2022 – 2024</p>
+                <p className="text-muted-foreground text-xs mt-1">Indian Institute of Information Technology Vadodara • 2022 – 2024</p>
               </div>
               <div className="relative pl-6 border-l-2 border-primary/30">
                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary/50" />
@@ -69,7 +69,7 @@ export function EducationSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="p-8 rounded-xl border border-border bg-card hover:glow-border transition-all duration-500"
+            className="p-8 rounded-xl border border-border bg-card card-lift"
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
@@ -92,7 +92,7 @@ export function EducationSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="p-8 rounded-xl border border-border bg-card hover:glow-border transition-all duration-500"
+            className="p-8 rounded-xl border border-border bg-card card-lift"
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">

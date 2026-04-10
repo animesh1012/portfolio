@@ -67,6 +67,11 @@ export function HeroSection() {
           <Button variant="glow-outline" size="lg" onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}>
             Get in Touch
           </Button>
+          <Button variant="glow-outline" size="lg" asChild>
+            <a href="/Animesh_CV.pdf" download="Animesh_Tripathi_CV.pdf">
+              <Download size={16} /> Download CV
+            </a>
+          </Button>
         </motion.div>
 
         <motion.div

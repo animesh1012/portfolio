@@ -8,37 +8,37 @@ const playlists = [
     title: "Movie Review Sentiment Analysis from Scratch",
     description: "Complete NLP & Deep Learning project — build a text sentiment classifier using RNN from scratch.",
     category: "NLP & Deep Learning",
-    thumbnail: "/SENTIMENT ANALYSIS.png",
+    thumbnail: "SENTIMENT ANALYSIS.png",
   },
   {
     title: "Human Eye Disease Prediction System",
     description: "Build an image recognition model using Python for detecting eye diseases with ML.",
     category: "Computer Vision",
-    thumbnail: "/eye_disease.webp",
+    thumbnail: "eye_disease.webp",
   },
   {
     title: "Music Genre Classification System",
     description: "Build an audio classification system using Python — complete ML project walkthrough.",
     category: "Machine Learning",
-    thumbnail: "/Music_genre.png",
+    thumbnail: "Music_genre.png",
   },
   {
     title: "Plant Disease Detection System",
     description: "Image recognition model using Python to identify plant diseases — end-to-end ML project.",
     category: "Computer Vision",
-    thumbnail: "/plant_disease.webp",
+    thumbnail: "plant_disease.webp",
   },
   {
     title: "Amazon Redshift Tutorial for Beginners",
     description: "Learn the basics of Amazon Redshift — data warehousing fundamentals and hands-on tutorials.",
     category: "Data Engineering",
-    thumbnail: "/amazon_redshift.jpg",
+    thumbnail: "amazon_redshift.jpg",
   },
   {
     title: "Fruits & Vegetables Recognition System",
     description: "Complete ML project — build an image classification system to recognize fruits and vegetables.",
     category: "Machine Learning",
-    thumbnail: "/Fruits_and_veg.jpg",
+    thumbnail: "Fruits_and_veg.jpg",
   },
 ];
 
@@ -65,7 +65,7 @@ export function YoutubeSection() {
             {/* Channel name with logo */}
             <div className="flex items-center gap-4 mb-4">
               <img
-                src="/yt_channel_logo.png"
+                src={`${import.meta.env.BASE_URL}yt_channel_logo.png`}
                 alt="SPOTLESS TECH logo"
                 className="w-14 h-14 rounded-2xl object-cover shadow-md border border-border"
               />
@@ -97,7 +97,7 @@ export function YoutubeSection() {
               {/* Thumbnail area */}
               <div className="aspect-video relative overflow-hidden bg-muted">
                 <img
-                  src={p.thumbnail}
+                  src={`${import.meta.env.BASE_URL}${p.thumbnail}`}
                   alt={p.title}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />

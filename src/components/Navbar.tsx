@@ -40,7 +40,9 @@ export function Navbar() {
 
   const scrollTo = (href: string) => {
     setMobileOpen(false);
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    }, 300);
   };
 
   return (
